@@ -1,0 +1,106 @@
+.header {
+		margin: 0 auto;
+		max-width: 1490px;
+	&__top {
+		border-radius: 20px;
+		background-color: $mainColor;
+	}
+}
+.menu {
+	&__link {
+		color: $mainTextColor;
+	}
+	&__body {
+		padding-right: 2rem;
+		
+	}
+	&__list {
+	display: flex;
+	gap: 3rem;
+    row-gap: 1rem;
+	flex-wrap: wrap;
+	}
+}
+.top-header {
+	&__container {
+		
+		display: flex;
+		@include flex(center, space-between);
+		padding: 1rem 3rem;
+	}
+	&__menu {
+
+	}
+	&__user {
+		display: flex;
+		align-items: center;
+		color: $mainTextColor;
+	}
+	
+}
+.body-header {
+	&__container {
+			@include flex(center, space-between);
+			height: 9rem;
+			background-color: rgba(231 201 19 / 55%);
+			padding: 0 3rem;
+			border-radius: 20px;
+		}
+	&__logo {
+		flex-grow: 2;
+	}
+	&__actions {
+					flex-grow: 9;
+		}
+}
+.search-header {
+	position: relative;
+	border-radius: 3px;
+			&__button {
+				position: absolute;
+				top: 0;
+				background-color: transparent;
+				height: 41px;
+				width: 41px;
+				@include flex(center, center)
+			}
+		
+			&__input {
+				height: 41px;
+				padding: 0px 20px 0px 50px;
+				font-size: 1.7rem;
+				outline: none;
+				border: none;
+				border-radius: 25px;
+				&::placeholder {
+					color: rgb(26, 80, 8);
+					font-weight: 700;
+				}
+			}
+}
+
+.actions-header {
+	text-align: center;
+	@include flex(center, space-between);
+	&__location {
+			flex-grow: 1;
+			&__link {
+				&:hover  {
+					color: red;
+				}
+			}
+	}
+
+
+}
+.phones-header {
+	@include flex(center, space-between);
+	flex-grow: 1;
+	&__item {
+		color: rgb(18, 10, 78);
+		font-size: 1.4rem;
+		border-radius: 3px;
+		border: 1px solid #00d2ff;
+	}
+
+}
