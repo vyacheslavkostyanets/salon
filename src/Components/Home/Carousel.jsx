@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
-import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
-import DataCarousel from "./DataCarousel";
+// import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
+// import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
+import { DataCarousel } from "./DataCarousel";
 let start = 0;
 
 export const Carousel = () => {
@@ -19,14 +19,7 @@ export const Carousel = () => {
 
   useEffect(() => {
     const counter = start + carousel.current.offsetWidth;
-    console.log(
-      start,
-      "start",
-      carousel.current.scrollWidth,
-      "carousel.current.scrollWidth"
-    );
     if (counter <= carousel.current.scrollWidth) {
-      console.log("start");
       setWidth(start);
     }
     const interval = setInterval(() => {
@@ -52,7 +45,21 @@ export const Carousel = () => {
             {DataCarousel.map((image) => {
               return (
                 <motion.div className="carousel__item" key={image}>
-                  <img src={image} alt={image} />
+                  <motion.img
+                    initial={{ opacity: 0 }}
+                    whileInView={{
+                      opacity: 1,
+                      scale: [1, 2, 2, 1, 1],
+                      rotate: [0, 0, 270, 270, 0],
+                      borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+                    }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 5 }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    src={image}
+                    alt={image}
+                  />
                 </motion.div>
               );
             })}

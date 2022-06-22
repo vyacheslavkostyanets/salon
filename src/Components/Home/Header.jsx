@@ -2,7 +2,7 @@ import React from "react";
 import FaceSharpIcon from "@mui/icons-material/FaceSharp";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 import PlaceIcon from "@mui/icons-material/Place";
-import logo from "../assets/img/logo.png";
+import logo from "../../assets/img/logo.png";
 // import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 // import CloseSharpIcon from '@mui/icons-material/CloseSharp';
 

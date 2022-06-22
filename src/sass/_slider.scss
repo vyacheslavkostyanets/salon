@@ -4,8 +4,7 @@
 }
 .slider {
 	position: relative;
-
-	img {
+	&__img {
 		width: 100%;
 		max-height: 450px;
 		border-radius: 20px;

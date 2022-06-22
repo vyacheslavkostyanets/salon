@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
+import { motion, AnimatePresence } from "framer-motion";
 
 const dataSlider = [
   {
@@ -42,7 +43,7 @@ export const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       handleSlider("right");
-    }, 2000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, [slider, handleSlider]);
@@ -54,7 +55,19 @@ export const Slider = () => {
           className="slider__left"
           onClick={() => handleSlider("left")}
         />
-        <img src={dataSlider[slider].img} alt="Slider" />
+        <div>
+          <AnimatePresence>
+            <motion.img
+              className="slider__img"
+              key={dataSlider[slider].img}
+              src={dataSlider[slider].img}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, scale: [1, 0.5, 0.5, 1, 1] }}
+              transition={{ duration: 2 }}
+              whileHover={{ scale: 1.05 }}
+            />
+          </AnimatePresence>
+        </div>
         <div className="slider__description">
           <h2 className="slider__description__header">
             {dataSlider[slider].name}
