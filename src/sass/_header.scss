@@ -6,30 +6,13 @@
 		background-color: $mainColor;
 	}
 }
-.menu {
-	&__link {
-		color: $mainTextColor;
-	}
-	&__body {
-		padding-right: 2rem;
-		
-	}
-	&__list {
-	display: flex;
-	gap: 3rem;
-    row-gap: 1rem;
-	flex-wrap: wrap;
-	}
-}
+
 .top-header {
 	&__container {
 		
 		display: flex;
 		@include flex(center, space-between);
 		padding: 1rem 3rem;
-	}
-	&__menu {
-
 	}
 	&__user {
 		display: flex;

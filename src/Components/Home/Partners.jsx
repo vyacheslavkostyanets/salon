@@ -26,9 +26,9 @@ export const Partners = () => {
             dragConstraints={{ right: 0, left: -width }}
             className="partners__inner"
           >
-            {DataPartners.map((image) => {
+            {DataPartners.map((image, index) => {
               return (
-                <div className="partners__item" key={image + "partners"}>
+                <div className="partners__item" key={index}>
                   <motion.img
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1, scale: [1, 2, 2, 1, 1] }}

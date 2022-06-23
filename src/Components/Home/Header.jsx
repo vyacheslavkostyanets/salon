@@ -3,58 +3,14 @@ import FaceSharpIcon from "@mui/icons-material/FaceSharp";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 import PlaceIcon from "@mui/icons-material/Place";
 import logo from "../../assets/img/logo.png";
-// import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
-// import CloseSharpIcon from '@mui/icons-material/CloseSharp';
+import Navigation from "./Navigation";
 
 const Header = () => {
   return (
     <header className="header">
       <div className="header__top top-header">
         <div className="top-header__container">
-          <div className="top-header__menu menu">
-            <nav className="menu__body">
-              <ul className="menu__list">
-                <li className="menu__item">
-                  <a href="/#" className="menu__link">
-                    Послуги
-                  </a>
-                </li>
-                <li className="menu__item">
-                  <a href="/#" className="menu__link">
-                    Ціни
-                  </a>
-                </li>
-                <li className="menu__item">
-                  <a href="/#" className="menu__link">
-                    Масажисти
-                  </a>
-                </li>
-                <li className="menu__item">
-                  <a href="/#" className="menu__link">
-                    Відгуки
-                  </a>
-                </li>
-                <li className="menu__item">
-                  <a href="/#" className="menu__link">
-                    Сертифікати
-                  </a>
-                </li>
-                <li className="menu__item">
-                  <a href="/#" className="menu__link">
-                    Статті
-                  </a>
-                </li>
-                <li className="menu__item">
-                  <a href="/#" className="menu__link">
-                    Контакти
-                  </a>
-                </li>
-              </ul>
-            </nav>
-
-            {/* <MenuRoundedIcon style={{color: "white", fontSize: "2.7rem"}}/>
-				<CloseSharpIcon  style={{color: "white", fontSize: "2.7rem"}}/> */}
-          </div>
+          <Navigation />
           <a href="/#" className="top-header__user">
             <FaceSharpIcon style={{ color: "white", fontSize: "2.7rem" }} />
             Кабінет
