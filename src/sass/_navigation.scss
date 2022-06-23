@@ -26,8 +26,6 @@
 .nav	{
 
 	&__list {
-		transform: translateX(0px);
-		transition: transform .9s ease-in;
 		flex-direction: column;
 		position: fixed;
 		left: 0;
@@ -35,17 +33,20 @@
 		bottom: 0;
 		width: 80%;
 		max-width: 300px;
-		padding: 20px 10px;
+		padding: 7rem 2.5rem 0;
 		background-color: #000000e0;
 		box-sizing: border-box;
 		z-index: 5;
+		transform: translate(0);
+		transition: transform .9s ease-in;
 	}
 	&__button {
 		display: block;
 		position: fixed;
+		top: 1.5rem;
+		left: 2.5rem;
 		background-color: red;
-		padding: 2rem;
-		border-radius: 50%;
+		border-radius: 0.2rem;
 		cursor: pointer;
 		z-index: 10;
 	}

@@ -30,7 +30,9 @@ const Navigation = () => {
       });
     } else {
       setHideOrShow(() => {
-        return { display: "flex" };
+        return {
+          display: "flex",
+        };
       });
     }
   };
@@ -49,18 +51,18 @@ const Navigation = () => {
         >
           {isOpen ? (
             <CloseSharpIcon
-              style={{ color: "white", fontSize: "2.7rem" }}
+              style={{ color: "white", fontSize: "3.7rem" }}
               onClick={handleMenu}
             />
           ) : (
             <MenuRoundedIcon
-              style={{ color: "white", fontSize: "2.7rem" }}
+              style={{ color: "white", fontSize: "3.7rem" }}
               onClick={handleMenu}
             />
           )}
         </motion.div>
         {isOpen ? <BackDrop handleMenu={handleMenu} /> : null}
-        <motion.div className={`nav nav__vision`} style={hideOrShow}>
+        <div className={`nav nav__vision`} style={hideOrShow}>
           <nav className="nav__body">
             <ul className="nav__list">
               {links.map((link, index) => {
@@ -74,7 +76,7 @@ const Navigation = () => {
               })}
             </ul>
           </nav>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
