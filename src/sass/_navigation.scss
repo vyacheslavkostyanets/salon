@@ -14,44 +14,48 @@
 		row-gap: 1rem;
 		flex-wrap: wrap;
 	}
-		&__button {
-			display: none;
-		}
+
+	&__button {
+		display: none;
+	}
 
 }
 
 @media (min-width: 300px) and (max-width: 1000px) {
-			
 
-.nav	{
 
-	&__list {
-		flex-direction: column;
-		position: fixed;
-		left: 0;
-		top: 0;
-		bottom: 0;
-		width: 80%;
-		max-width: 300px;
-		padding: 7rem 2.5rem 0;
-		background-color: #000000e0;
-		box-sizing: border-box;
-		z-index: 5;
-		transform: translate(0);
-		transition: transform .9s ease-in;
-	}
-	&__button {
-		display: block;
-		position: fixed;
-		top: 1.5rem;
-		left: 2.5rem;
-		background-color: red;
-		border-radius: 0.2rem;
-		cursor: pointer;
-		z-index: 10;
-	}
-	&__vision {
-		display: none;
-	}
+	.nav {
 
-}}
+		&__list {
+			flex-direction: column;
+			position: fixed;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 80%;
+			max-width: 300px;
+			padding: 7rem 2.5rem 0;
+			background-color: #000000e0;
+			box-sizing: border-box;
+			z-index: 5;
+			transform: translate(0);
+			transition: transform .9s ease-in;
+		}
+
+		&__button {
+			display: block;
+			position: fixed;
+			top: 1.5rem;
+			left: 2.5rem;
+			background-color: red;
+			border-radius: 0.2rem;
+			cursor: pointer;
+			z-index: 10;
+		}
+
+		&__vision {
+			display: none;
+		}
+
+	}
+}
