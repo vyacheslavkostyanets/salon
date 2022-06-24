@@ -31,7 +31,7 @@ export const Partners = () => {
                 <div className="partners__item" key={index}>
                   <motion.img
                     initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1, scale: [1, 2, 2, 1, 1] }}
+                    whileInView={{ opacity: 1, scale: [1, 1.2, 1.2, 1, 1] }}
                     viewport={{ once: true }}
                     transition={{ duration: 4 }}
                     animate={{

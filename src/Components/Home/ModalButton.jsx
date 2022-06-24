@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Modal } from "./Modal";
 
 let ModalButton = () => {
+  const text =
+    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi omnis neque, earum nihil ipsum dolorem aliquam ducimus accusantium, maiores molestias perferendis culpa atque fugit? Odio, nam. Incidunt hic quia velit.";
   const [modalOpen, setModalOpen] = useState(false);
 
   const close = () => setModalOpen(false);
@@ -13,7 +15,7 @@ let ModalButton = () => {
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="save-button"
+        className="open-button"
         onClick={() => (modalOpen ? close() : open())}
       >
         Launch modal
@@ -30,7 +32,9 @@ let ModalButton = () => {
         // Fires when all exiting nodes have completed animating out
         onExitComplete={() => null}
       >
-        {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
+        {modalOpen && (
+          <Modal modalOpen={modalOpen} text={text} handleClose={close} />
+        )}
       </AnimatePresence>
     </div>
   );

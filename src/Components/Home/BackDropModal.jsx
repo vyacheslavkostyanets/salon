@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const BackDropModal = ({ children, onClick }) => {
   return (
     <motion.div
-      className="backdropmodal"
+      className="backdropmodal orange-gradien"
       onClick={onClick}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

@@ -49,7 +49,7 @@ export const Carousel = () => {
                     initial={{ opacity: 0 }}
                     whileInView={{
                       opacity: 1,
-                      scale: [1, 2, 2, 1, 1],
+                      scale: [1, 1.3, 1.5, 1.4, 1.7],
                       rotate: [0, 0, 270, 270, 0],
                       borderRadius: ["20%", "20%", "50%", "50%", "20%"],
                     }}

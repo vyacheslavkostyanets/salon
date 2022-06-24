@@ -23,7 +23,7 @@ const Modal = ({ handleClose, text }) => {
     },
   };
   return (
-    <div>
+    <div className="modal__container">
       <BackDropModal onClick={handleClose}>
         <motion.div
           onClick={(e) => e.stopPropagation()}
@@ -32,7 +32,15 @@ const Modal = ({ handleClose, text }) => {
           initial="hidden"
           animate="visible"
           exit="exit"
-        ></motion.div>
+        >
+          <div className="modal__info__wrapper">
+            <p>{text}</p>
+
+            <button onClick={handleClose} className="close-button">
+              Закрити
+            </button>
+          </div>
+        </motion.div>
       </BackDropModal>
     </div>
   );
