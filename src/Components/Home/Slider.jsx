@@ -24,6 +24,11 @@ const dataSlider = [
   },
 ];
 
+const swipeConfidenceThreshold = 10000;
+const swipePower = (offset, velocity) => {
+  return Math.abs(offset) * velocity;
+};
+
 export const Slider = () => {
   const [slider, setSliderState] = useState(0);
 
@@ -65,6 +70,16 @@ export const Slider = () => {
               animate={{ opacity: 1, scale: [1, 0.5, 0.5, 1, 1] }}
               transition={{ duration: 2 }}
               whileHover={{ scale: 1.05 }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+                if (swipe < -swipeConfidenceThreshold) {
+                  handleSlider("right");
+                } else if (swipe > swipeConfidenceThreshold) {
+                  handleSlider("left");
+                }
+              }}
             />
           </AnimatePresence>
         </div>
