@@ -1,0 +1,18 @@
+.phones-modal {
+  &__item {
+    border-radius: 3px;
+    background-color: #f7e4ac;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    border: 1px solid black;
+    padding: 0.7rem;
+    &__span {
+      font-weight: 300;
+      font-size: 1.7rem;
+    }
+  }
+  &__span {
+    font-weight: 300;
+    font-size: 2rem;
+  }
+}

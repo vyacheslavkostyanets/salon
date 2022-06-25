@@ -1,0 +1,28 @@
+.form-callbackme {
+  &__span {
+    font-weight: 300;
+    font-size: 2rem;
+  }
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin: 0 auto;
+  padding: 1rem;
+  gap: 7px;
+  &__send {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+  &__input {
+    border: 1px solid black;
+    outline: none;
+  }
+  &__label {
+    color: black;
+    border-radius: 3px;
+    background-color: #ffffff;
+    text-align: left;
+    font-weight: 500;
+    padding: 2px;
+  }
+}

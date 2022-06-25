@@ -3,64 +3,65 @@
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	-webkit-tap-highlight-color: transparent;
-	// user-select: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  // user-select: none;
 }
 html {
-	font-size: 10px;
+  font-size: 10px;
 }
 
 body {
-	font-family: "Roboto", sans-serif;
-	font-size: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
 }
 
 h1 {
-	font-size: 2.7rem;
+  font-size: 2.7rem;
 }
 h2 {
-	font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 h3 {
-	font-size: 2.4rem;
+  font-size: 2.4rem;
 }
 h4 {
-	font-size: 2.3rem;
+  font-size: 2.3rem;
 }
-p, li, a {
-	font-size: 1.7rem;
+p,
+li,
+a {
+  font-size: 1.7rem;
 }
 ul {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 a {
-	text-decoration: none;
-	color: unset;
-}
-
-a:hover {
-	color: $hoverLinkColor;
+  text-decoration: none;
+  color: unset;
 }
 
 img {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 button {
-	border: none;
-	cursor: pointer;
+  border: none;
+  cursor: pointer;
 }
 .default-button {
-		padding: 4px;
-		border-radius: 3px;
-		background-color: rgba(149 3 155 / 56%);
-		color: white;
-		font-weight: 100;
-		&:hover {
-			background-color: rgba(55, 187, 7, 0.56);
-		}
+  padding: 4px;
+  border-radius: 3px;
+  background-color: rgba(149 3 155 / 56%);
+  color: white;
+  font-weight: 100;
+  &:hover {
+    background-color: rgba(55, 187, 7, 0.56);
+  }
+}
+.flex-center {
+  @include flex(center, center);
 }

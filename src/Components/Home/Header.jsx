@@ -4,6 +4,9 @@ import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 import PlaceIcon from "@mui/icons-material/Place";
 import logo from "../../assets/img/logo.png";
 import Navigation from "./Navigation";
+import { ModalButton } from "./ModalButton";
+import { text, name } from "./PhoneModalInfo";
+import { textCallBack, nameCallBack } from "./CallBackMe";
 
 const Header = () => {
   return (
@@ -42,13 +45,15 @@ const Header = () => {
               </a>
             </div>
             <div className="actions-header__phones phones-header">
+              <ModalButton text={text} name={name} />
               <span className="phones-header__item">044-123-45-67</span>
               <span className="phones-header__item">044-123-45-67</span>
-              <button className="phones-header__callback default-button">
-                Перетелефонувати
-                <br />
-                мені
-              </button>
+
+              <ModalButton
+                text={textCallBack}
+                name={nameCallBack}
+                className="phones-header__callback default-button"
+              />
             </div>
           </div>
         </div>

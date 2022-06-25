@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Modal } from "./Modal";
 
-let ModalButton = () => {
-  const text =
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi omnis neque, earum nihil ipsum dolorem aliquam ducimus accusantium, maiores molestias perferendis culpa atque fugit? Odio, nam. Incidunt hic quia velit.";
+let ModalButton = ({ text, name }) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const close = () => setModalOpen(false);
@@ -18,9 +16,8 @@ let ModalButton = () => {
         className="open-button"
         onClick={() => (modalOpen ? close() : open())}
       >
-        Launch modal
+        {name}
       </motion.button>
-
       <AnimatePresence
         // Disable any initial animations on children that
         // are present when the component is first rendered
