@@ -59,8 +59,7 @@ const Footer = () => {
         </motion.div>
       </nav>
       <div className="footer__date">
-        © {new Date().getFullYear()} Massage Salon Ukraine
-        Massage@Massage.Massage
+        © {new Date().getFullYear()} Massage Salon Ukraine Masage@M.Ma
       </div>
     </footer>
   );

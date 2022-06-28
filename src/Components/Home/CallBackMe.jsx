@@ -21,7 +21,13 @@ const CallBackMe = () => {
           <label for="phone" className="form-callbackme__label">
             Номер:*
           </label>
-          <input type="tel" id="phone" name="phone" required />
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            className="form-callbackme__input"
+          />
           <input
             type="submit"
             value="Відправити"

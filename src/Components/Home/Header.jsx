@@ -40,15 +40,17 @@ const Header = () => {
           <div className="body-header__actions actions-header">
             <div className="actions-header__location">
               <a href="/#" className="actions-header__location__link">
-                <PlaceIcon style={{ fontSize: "2.7rem" }} />
+                <PlaceIcon style={{ fontSize: "3rem" }} />
                 Київ
               </a>
             </div>
             <div className="actions-header__phones phones-header">
               <ModalButton text={text} name={name} />
-              <span className="phones-header__item">044-123-45-67</span>
-              <span className="phones-header__item">044-123-45-67</span>
 
+              <div className="phones-header__items">
+                <span className="phones-header__item">044-123-45-67</span>
+                <span className="phones-header__item">044-123-45-67</span>
+              </div>
               <ModalButton
                 text={textCallBack}
                 name={nameCallBack}

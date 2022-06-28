@@ -22,8 +22,7 @@ const PhoneModalInfo = () => {
 
     name: (
       <div className="flex-center">
-        <PhoneIcon />
-        {/* <span>Зателефонувати</span> */}
+        <PhoneIcon style={{ fontSize: "3rem" }} />
       </div>
     ),
   };

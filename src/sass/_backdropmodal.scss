@@ -34,8 +34,7 @@
   padding: 1rem;
   border-radius: 3px;
   color: white;
-  font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .close-button {
@@ -56,4 +55,9 @@
   height: 100%;
   @include flex(center, space-around);
   flex-direction: column;
+}
+@media (max-width: 600px) {
+  .modal {
+    width: 90%;
+  }
 }
